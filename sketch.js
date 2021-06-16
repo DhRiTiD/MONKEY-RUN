@@ -156,7 +156,7 @@ function obs() {
     //creating the obstacles as local  variable
     var obstacle = createSprite(500, 305, 10, 10);
     obstacle.addImage(obstacleI);
-    obstacle.scale = 0.17;
+    obstacle.scale = 0.15;
 
     //moving the obstacles
     obstacle.velocityX = -5;
