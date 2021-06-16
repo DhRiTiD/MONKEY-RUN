@@ -77,7 +77,7 @@ function draw() {
   if (gameState === PLAY) {
 
     //calculate survival time
-    survivalTym = Math.ceil(frameCount / frameRate());
+    survivalTym = survivalTym + Math.round(getFrameRate() / 60);
 
     //making the monkey jump
     if (keyDown("space") && monkey.y >= 290) {
@@ -154,9 +154,9 @@ function draw() {
 function obs() {
   if (frameCount % 140 === 0) {
     //creating the obstacles as local  variable
-    var obstacle = createSprite(500, 305, 10, 10);
+    var obstacle = createSprite(500, 315, 10, 10);
     obstacle.addImage(obstacleI);
-    obstacle.scale = 0.15;
+    obstacle.scale = 0.17;
 
     //moving the obstacles
     obstacle.velocityX = -5;
